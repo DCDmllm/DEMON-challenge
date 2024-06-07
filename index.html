@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="description" content="DEMON challenge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DEMON: Demonstrative Instruction Following Challenge</title>
+    <title>MM24 Grand Challenge DEMON: Demonstrative Instruction Following Challenge</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -36,7 +36,51 @@
     <script src="./static/js/bulma-carousel.min.js"></script>
     <script src="./static/js/bulma-slider.min.js"></script>
     <!--  <script src="./static/js/index.js"></script>-->
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        th[colspan] {
+            text-align: center;
+        }
+
+        caption {
+            font-family: sans-serif;
+            font-size: 20px;
+            color: #666;
+            text-align: center;
+            margin-top: 10px;
+            /* Add top margin */
+        }
+
+        figcaption {
+            font-family: sans-serif;
+            font-size: 20px;
+            color: #666;
+            text-align: center;
+            margin-top: 10px;
+            /* Add top margin */
+        }
+    </style>
 </head>
+
+
+
 
 <body>
 
@@ -45,26 +89,8 @@
             <div class="container is-max-desktop">
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
-                        <h1 class="title is-1 publication-title">DEMON: Demonstrative Instruction Following Challenge</h1>
-                        <div class="is-size-5 publication-authors">
-                            <span class="author-block">
-                                <span>Zhiqi Ge</span><sup>1</sup>,</span>
-                            <span class="author-block">
-                                <span>Juncheng Li</span><sup>2</sup>,</span>
-                            <span class="author-block">
-                                <span>Qifan Yu</span><sup>1</sup>,</span>
-                            <span class="author-block">
-                                <span>Wei Zhou</span><sup>1</sup>,</span>
-                            <span class="author-block">
-                                <span>Siliang Tang</span><sup>1</sup>,</span>
-                            <span class="author-block">
-                                <span>Yueting Zhuang<sup>1</sup>
-                        </div>
-
-                        <div class="is-size-5 publication-authors">
-                            <span class="author-block"><sup>1</sup>Zhejiang University</span>
-                            <span class="author-block"><sup>2</sup>National University of Singapore</span>
-                        </div>
+                        <h1 class="title is-1 publication-title">MM24 Grand Challenge DEMON: Demonstrative Instruction Following Challenge
+                        </h1>
 
                         <div class="column has-text-centered">
                             <div class="publication-links">
@@ -80,7 +106,7 @@
                                 </span>
                                 <!-- Code Link. -->
                                 <span class="link-block">
-                                    <a href="https://github.com/DCDmllm/DEMON-challenge/tree/main"
+                                    <a href="https://github.com/DCDmllm/DEMON-challenge/tree/main/code"
                                         class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
                                             <i class="fas fa-code"></i>
@@ -90,7 +116,7 @@
                                 </span>
                                 <!-- Participate Link. -->
                                 <span class="link-block">
-                                    <a href="https://github.com/DCDmllm/DEMON-challenge/tree/main"
+                                    <a href="https://forms.gle/ixLJiAoGszrvPXQX6"
                                         class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
                                             <i class="fas fa-user"></i>
@@ -110,26 +136,27 @@
     <section class="hero teaser">
         <div class="container is-max-desktop" style="max-width: 70%!important;">
             <div class="hero-body">
-
-                <img src="static/images/demo.svg" width="100%" alt="">
-                <h2 class="subtitle has-text-centered">
-                    Figure 1: Demonstrations and task taxonomy of the proposed DEMON challenge.
-                </h2>
+                <figure>
+                    <img src="static/images/demo.svg" width="100%"
+                        alt="Demonstrations and task taxonomy of the proposed DEMON challenge." />
+                    <figcaption>Demonstrations of DEMON Challenge</figcaption>
+                </figure>
             </div>
         </div>
     </section>
 
+
     <section class="section">
         <div class="container is-max-desktop">
-            <!-- Abstract. -->
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
-                    <h2 class="title is-3">Abstract</h2>
+                    <h2 class="title is-3">Overview</h2>
                     <div class="content has-text-justified">
                         <p>To facilitate research in interleaved vision-language instruction following, we build
-                            <strong>DEMON</strong>, a comprehensive challenge of 29 tasks with varied, demonstrative 
+                            <strong>DEMON</strong>, a comprehensive challenge of 29 tasks with varied, demonstrative
                             instructions in a uniﬁed instruction-response format, covering 20 diverse scenarios.
-                            As depicted in Figure 1, DEMON has three important properties:</p>
+                            DEMON has three important properties:
+                        </p>
                         <ul>
                             <li><strong>Interleaved vision-language context,</strong> all the instructions comprise
                                 sequences of interconnected images and texts, such as storyboards with scripts, and
@@ -141,15 +168,15 @@
                                 encompasses multiple real-world scenarios, including cartoons, industrial images,
                                 driving recordings, recipes, <em>etc</em>.</li>
                         </ul>
-
                     </div>
                 </div>
             </div>
+
+
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
-                    <h2 class="title is-3">Challenge Task</h2>
+                    <h2 class="title is-3">Task Details</h2>
                     <div class="content has-text-justified">
-
                         <p><strong>Visual Storytelling.</strong> This task involves creating a coherent narrative based
                             on a series of images presented in sequence. It tests the model's ability to understand
                             context, sequence, and the progression of events from visual inputs, requiring the
@@ -188,18 +215,553 @@
                     </div>
                 </div>
             </div>
-            <!-- / Paper video.
+
+            <table>
+                <caption>DEMON Challenge Task Details</caption>
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Scenario</th>
+                        <th>Dataset</th>
+                        <th>Metric</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th colspan="4">Multi-Modal Dialogue</th>
+                    </tr>
+                    <tr>
+                        <td>Conversational Embodied Dialogue</td>
+                        <td>Embodied</td>
+                        <td>ALFRED</td>
+                        <td>ROUGE-L</td>
+                    </tr>
+                    <tr>
+                        <td>Multi-Modal Dialogue</td>
+                        <td>Conversation</td>
+                        <td>MMCoQA</td>
+                        <td>ROUGE-L</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">Visual Relation Inference</th>
+                    </tr>
+                    <tr>
+                        <td>Visual Change Captioning</td>
+                        <td>Surveillance</td>
+                        <td>Spot-the-Diff</td>
+                        <td>ROUGE-L</td>
+                    </tr>
+                    <tr>
+                        <td>Visual Change Captioning</td>
+                        <td>Synthetic</td>
+                        <td>CLEVR-Change</td>
+                        <td>ROUGE-L</td>
+                    </tr>
+                    <tr>
+                        <td>Visual Relationship Expressing</td>
+                        <td>General</td>
+                        <td>IEdit</td>
+                        <td>ROUGE-L</td>
+                    </tr>
+                    <tr>
+                        <td>Subtle Difference Expressing</td>
+                        <td>Fine-Grained</td>
+                        <td>Birds-to-Words</td>
+                        <td>ROUGE-L</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">Visual Storytelling</th>
+                    </tr>
+                    <tr>
+                        <td>Animated Story Completion</td>
+                        <td>Cartoon</td>
+                        <td>AESOP</td>
+                        <td>ROUGE-L</td>
+                    </tr>
+                    <tr>
+                        <td>Animated Story Completion</td>
+                        <td>Cartoon</td>
+                        <td>PororoSV</td>
+                        <td>ROUGE-L</td>
+                    </tr>
+                    <tr>
+                        <td>Animated Story Completion</td>
+                        <td>Cartoon</td>
+                        <td>FlintstonesSV</td>
+                        <td>ROUGE-L</td>
+                    </tr>
+                    <tr>
+                        <td>Sequential Photo Storytelling</td>
+                        <td>Album</td>
+                        <td>VIST</td>
+                        <td>ROUGE-L</td>
+                    </tr>
+                    <tr>
+                        <td>Sequential Photo Storytelling</td>
+                        <td>Cartoon</td>
+                        <td>DiDeMoSV</td>
+                        <td>ROUGE-L</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">Multi-Modal Cloze</th>
+                    </tr>
+                    <tr>
+                        <td>Comic Dialogue Identification</td>
+                        <td>Cartoon</td>
+                        <td>COMICS-Dialogue</td>
+                        <td>Accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>Comic Panel Identification</td>
+                        <td>Cartoon</td>
+                        <td>COMICS-Panel</td>
+                        <td>Accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>Recipe Completion</td>
+                        <td>Recipe</td>
+                        <td>RecipeQA-TextCloze</td>
+                        <td>Accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>Visual Step Cloze</td>
+                        <td>Recipe</td>
+                        <td>RecipeQA-VisualCloze</td>
+                        <td>Accuracy</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">Knowledge Grounded QA</th>
+                    </tr>
+                    <tr>
+                        <td>Webpage QA</td>
+                        <td>Webpage</td>
+                        <td>WebQA</td>
+                        <td>Accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>Textbook QA</td>
+                        <td>Textbook</td>
+                        <td>TQA</td>
+                        <td>Accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>Complex Multimodal QA</td>
+                        <td>Wikipedia</td>
+                        <td>MMQA</td>
+                        <td>Accuracy</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">Text-Rich Images QA</th>
+                    </tr>
+                    <tr>
+                        <td>Slide QA</td>
+                        <td>Slide</td>
+                        <td>SlideVQA</td>
+                        <td>Accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>OCR QA</td>
+                        <td>Book Cover</td>
+                        <td>OCR-VQA</td>
+                        <td>Accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>Document QA</td>
+                        <td>Document Image</td>
+                        <td>DocVQA</td>
+                        <td>Accuracy</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">Multi-Image Reasoning</th>
+                    </tr>
+                    <tr>
+                        <td>Image-Set QA</td>
+                        <td>Driving Recording</td>
+                        <td>nuScenes</td>
+                        <td>Accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>Industrial Inspection</td>
+                        <td>Industrial</td>
+                        <td>VISION</td>
+                        <td>Accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>Fashion QA</td>
+                        <td>Fashion</td>
+                        <td>Fashion200K</td>
+                        <td>Accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>Property Coherence</td>
+                        <td>General</td>
+                        <td>MIT-States-PropertyCoherence</td>
+                        <td>Accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>State Transformation Coherence</td>
+                        <td>General</td>
+                        <td>MIT-States-StateCoherence</td>
+                        <td>Accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>Visual Step Matching</td>
+                        <td>Recipe</td>
+                        <td>RecipeQA-ImageCoherence</td>
+                        <td>Accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>Multi-Image Visual Entailment</td>
+                        <td>General</td>
+                        <td>NLVR2</td>
+                        <td>Accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>Ambiguity Analysis</td>
+                        <td>Mobile Photo</td>
+                        <td>VizWiz</td>
+                        <td>Accuracy</td>
+                    </tr>
+                </tbody>
+            </table>
+
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
-                    <h2 class="title is-3">Data</h2>
+                    <h2 class="title is-3">Dataset</h2>
+                    <div class="content has-text-justified">
+                        <p>For each task, we will provide a dataset with a training set and a test set. The annoations
+                            are in the form of a JSON file. A example of the task metadata is shown below.</p>
+                    </div>
+                </div>
+            </div>
+            <pre><code class="language-json">{
+    "dataset": "MMQA",
+    "split": "test",
+    "num_sample": "500",
+    "task_instruction": [
+        "Given a collection of relevant data, which includes images, text, and tables, your task is to respond accurately to the ensuing question. You must choose your answer from the Choice List. ",
+        "Utilizing the information, including images, text, and tables that I provide, could you provide a correct answer to the following question? You must choose your answer from the Choice List. ",
+        "With the aid of provided information like images, text, and tables, your assignment is to respond correctly to the question. You must choose your answer from the Choice List. ",
+        "Based on the data provided, which includes various forms like images, text, and tables, please respond to the following query. You must choose your answer from the Choice List. ",
+        "Using the relevant information I provide, which encompasses images, text, and tables, please accurately answer the question. You must choose your answer from the Choice List. ",
+        "Considering the information in different formats I've provided you, could you formulate a correct response to the ensuing query? You must choose your answer from the Choice List. ",
+        "Given a set of information including images, text, and tables, your task is to use this data to answer the subsequent question correctly. You must choose your answer from the Choice List. ",
+        "Relying on the furnished information, which includes graphics, text, and tabular data, could you provide an accurate response to the following question? You must choose your answer from the Choice List. ",
+        "With the amalgam of information provided, encompassing images, texts, and tables, please construct a correct answer to the following question. You must choose your answer from the Choice List. ",
+        "Using the array of information, including imagery, textual data, and tables, could you provide an accurate answer to the posed question? You must choose your answer from the Choice List. "
+    ],
+    "question_type": "multi-choice"
+}</code></pre>
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <div class="content has-text-justified">
+                        <p>A example of the instance annoation is shown below.</p>
+                    </div>
+                </div>
+            </div>
+            <pre><code class="language-json">{
+    "sample_id": "0",
+    "task_instruction_id": "7",
+    "task_instance": {
+        "context": "Global Table: {table#1} Context: {image#2} Question: What sports is the Ben Piazza 1976 movie title? Choice List:['soccer', 'baseball', 'basketball', 'football'] Your answer is:",
+        "images_path": [
+            "0.png",
+            "1.jpg"
+        ]
+    },
+    "response": "baseball" #contained only in the train set
+}</code></pre>
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <div class="content has-text-justified">
+                        <p>The dataset can be downloaded from <a
+                                href="https://drive.google.com/drive/folders/1x3O7brcJi4XJS2c6LLUpG5Xx0mg1WkRG">google
+                                drive</a>.
+                    </div>
+                </div>
+            </div>
+
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/
+              
+            <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+
+            <table>
+                <caption>DEMON Dataset Statistics</caption>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Tasks</th>
+                        <th>Scenarios</th>
+                        <th>Images</th>
+                        <th>Instructions</th>
+                        <th>Avg. Images / Instruction</th>
+                        <th>Avg. Words / Instruction</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>DEMON-Test</th>
+                        <td>29</td>
+                        <td>19</td>
+                        <td>62.81K</td>
+                        <td>18.18K</td>
+                        <td>3.46</td>
+                        <td>92.69</td>
+                    </tr>
+                    <tr>
+                        <th>DEMON-Train</th>
+                        <td>29</td>
+                        <td>19</td>
+                        <td>1.51M</td>
+                        <td>430.72K</td>
+                        <td>3.70</td>
+                        <td>98.58</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Evaluation</h2>
                     <div class="content has-text-justified">
                         <p>
-                            You can download the sample data now and the full data is coming soon.
+                            For <b>open-ended generation tasks</b>, the evaluation will be conducted using <i>ROUGE-L
+                                (F1)</i>, assessing the semantic and structural alignment of the generated text with
+                            reference texts.
+                        </p>
+                        <p>
+                            For <b>multi-choice tasks</b>, <i>Accuracy</i> will serve as the evaluation metric,
+                            measuring the correctness of selected options.
+                        </p>
+                        <p>
+                            The overall score for each team will be defined as the mean of these scores across all
+                            tasks, reflecting a comprehensive measure of performance akin to the scoring of human
+                            examinations.
+                        </p>
+                        <p>
+                            The evaluation code can be found in the <a
+                                href="https://github.com/DCDmllm/DEMON-challenge/tree/main/static">github
+                                repository</a>.
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Submission</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            To participate in the DEMON challenge, please first register by submitting the <a
+                                href="https://forms.gle/ixLJiAoGszrvPXQX6">form</a>.
+                        </p>
+                        <p>
+                            Participants can send the submission files to <a
+                                href="mailto:dcd-mllm@outlook.com">dcd-mllm@outlook.com</a> with the subject "DEMON
+                            Challenge Submission". We will evaluate the submissions and announce the results on the
+                            website later.
+                        </p>
+                        <p>
+                            The submission file should keep the same structure as the DEMON-Test dataset, with the
+                            response field filled with the predicted answer. Image folders are <b>not</b> required for
+                            submission.
                         </p>
                     </div>
                 </div>
-            </div> -->
+            </div>
+
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Baseline Results</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            We evaluate several state-of-the-art models on the DEMON challenge. The results are shown
+                            below.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <table>
+                <caption>Baseline Evaluation Result</caption>
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>Version</th>
+                        <th>Multi Modal Dialogue</th>
+                        <th>Visual Story Telling List</th>
+                        <th>Visual Relation Inference</th>
+                        <th>Multi Modal Cloze</th>
+                        <th>Knowledge Grounded QA</th>
+                        <th>Text Rich Images QA</th>
+                        <th>Multi Image Reasoning</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>BLIP-2</td>
+                        <td>vicuna-7b</td>
+                        <td>11.96</td>
+                        <td>20.10</td>
+                        <td>3.67</td>
+                        <td>18.25</td>
+                        <td>39.73</td>
+                        <td>30.53</td>
+                        <td>39.53</td>
+                    </tr>
+                    <tr>
+                        <td>InstructBlip</td>
+                        <td>vicuna-7b</td>
+                        <td>33.58</td>
+                        <td>24.41</td>
+                        <td>11.49</td>
+                        <td>21.20</td>
+                        <td>47.40</td>
+                        <td>44.40</td>
+                        <td>48.55</td>
+                    </tr>
+                    <tr>
+                        <td>LLaMA-Adapter V2</td>
+                        <td>llama-7b</td>
+                        <td>14.22</td>
+                        <td>17.57</td>
+                        <td>13.51</td>
+                        <td>18.00</td>
+                        <td>44.80</td>
+                        <td>32.00</td>
+                        <td>44.03</td>
+                    </tr>
+                    <tr>
+                        <td>LLaVA</td>
+                        <td>vicuna-7b</td>
+                        <td>7.79</td>
+                        <td>10.70</td>
+                        <td>8.27</td>
+                        <td>15.85</td>
+                        <td>36.20</td>
+                        <td>28.33</td>
+                        <td>41.53</td>
+                    </tr>
+                    <tr>
+                        <td>MiniGPT-4</td>
+                        <td>vicuna-7b</td>
+                        <td>13.70</td>
+                        <td>17.07</td>
+                        <td>7.95</td>
+                        <td>16.60</td>
+                        <td>30.27</td>
+                        <td>26.40</td>
+                        <td>43.50</td>
+                    </tr>
+                    <tr>
+                        <td>mPLUG-Owl</td>
+                        <td>llama-7b</td>
+                        <td>12.67</td>
+                        <td>19.33</td>
+                        <td>5.40</td>
+                        <td>16.25</td>
+                        <td>33.27</td>
+                        <td>32.47</td>
+                        <td>42.50</td>
+                    </tr>
+                    <tr>
+                        <td>OpenFlamingo</td>
+                        <td>llama-7b</td>
+                        <td>16.88</td>
+                        <td>24.22</td>
+                        <td>13.85</td>
+                        <td>21.65</td>
+                        <td>32.00</td>
+                        <td>30.60</td>
+                        <td>41.63</td>
+                    </tr>
+                    <tr>
+                        <td>Otter</td>
+                        <td>llama-7b</td>
+                        <td>15.37</td>
+                        <td>15.57</td>
+                        <td>11.39</td>
+                        <td>16.00</td>
+                        <td>41.67</td>
+                        <td>27.73</td>
+                        <td>43.85</td>
+                    </tr>
+                    <tr>
+                        <td>VPG-C</td>
+                        <td>llama-2-7b-chat</td>
+                        <td>42.70</td>
+                        <td>24.76</td>
+                        <td>25.50</td>
+                        <td>22.95</td>
+                        <td>51.00</td>
+                        <td>44.93</td>
+                        <td>48.68</td>
+                    </tr>
+                    <tr>
+                        <td>VPG-C</td>
+                        <td>vicuna-7b</td>
+                        <td>37.50</td>
+                        <td>25.20</td>
+                        <td>25.90</td>
+                        <td>22.15</td>
+                        <td>48.60</td>
+                        <td>44.93</td>
+                        <td>50.28</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Important Dates</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            <b>Registration Open:</b> 2024-5-1
+                        </p>
+                        <p>
+                            <b>Challenge Result Submission Deadline:</b> 2024-7-1
+                        </p>
+                        <p>
+                            <b>Challenge Technical Paper Submission Deadline:</b> 2024-7-10
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Organizers</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Zhiqi Ge, Zhejiang University, China
+                        </p>
+                        <p>
+                            Juncheng Li, National University of Singapore, Singapore
+                        </p>
+                        <p>
+                            Qifan Yu, Zhejiang University, China
+                        </p>
+                        <p>
+                            Wei Zhou, Zhejiang University, China
+                        </p>
+                        <p>
+                            Siliang Tang, Zhejiang University, China
+                        </p>
+                        <p>
+                            Yueting Zhuang, Zhejiang University, China
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
+        </div>
+
     </section>
 
     <footer class="footer">
